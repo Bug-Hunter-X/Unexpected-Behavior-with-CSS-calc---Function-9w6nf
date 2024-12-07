@@ -1,0 +1,19 @@
+/* bugSolution.css */
+
+/* Instead of mixing incompatible units, use a consistent unit or pre-calculate values */
+.container {
+  width: 50%;
+  /* Assuming the container's parent is 800px wide */
+  padding-left: 50px; /* Instead of calc(50% - 10em) */
+}
+
+/* Avoid deeply nested percentage calculations within calc();  Use absolute or relative units instead. */
+.nested {
+  width: 50%; /*Instead of a complex calc involving percentages*/ 
+}
+
+/* For better browser compatibility, especially for older versions, use vendor prefixes where necessary. */
+.element {
+  width: -webkit-calc(50% - 10px);
+  width: calc(50% - 10px);
+} 
